@@ -1,5 +1,6 @@
 package com.example.listview
 
+import android.content.Intent
 import android.icu.util.TimeZone
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -38,6 +39,13 @@ class MainActivity : AppCompatActivity() {
 
             //Toastで表示
             Toast.makeText(this, timeZone, Toast.LENGTH_SHORT).show()
+
+            //main2へ移動
+            val intent = Intent(this, Main2Activity::class.java)
+            intent.putExtra("select", timeZone)
+            startActivity(intent)
+            //これ以下って実行されんの？
+
         }
 
 
